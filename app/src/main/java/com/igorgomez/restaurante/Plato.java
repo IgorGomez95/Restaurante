@@ -1,8 +1,11 @@
 package com.igorgomez.restaurante;
 
+
 public class Plato {
     private String tvNombrePlato, tvDescripcion, tvPrecio;
     private int imgPlato;
+
+
 
     public Plato(){
 

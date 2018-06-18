@@ -23,4 +23,8 @@
     <string name="cerrarsesion">Cerrar Sesión</string>
     <string name="vermesa">Ver Mesa</string>
     <string name="verplato">Ver Plato</string>
+    <string name="pIdMesa">Mesa</string>
+    <string name="pCapacidad">Capacidad</string>
+    <string name="pDisposicion">Disposicion</string>
+    <string name="pConsumo">Consumo</string>
 </resources>

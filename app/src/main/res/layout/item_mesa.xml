@@ -57,14 +57,6 @@
                     android:layout_height="wrap_content"
                     android:textSize="16sp"
                     android:textStyle="italic"/>
-
-                <Button
-                    android:id="@+id/btnVerMesa"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/vermesa"
-                    android:theme="@style/Boton"
-                    />
             </LinearLayout>
 
         </LinearLayout>

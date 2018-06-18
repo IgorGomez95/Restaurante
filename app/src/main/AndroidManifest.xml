@@ -24,7 +24,9 @@
             android:label="@string/title_activity_navegador"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".Mesas" />
-        <activity android:name=".menu"></activity>
+        <activity android:name=".menu" />
+        <activity android:name=".Consumo" />
+        <activity android:name=".Pedidos"></activity>
     </application>
 
 </manifest>

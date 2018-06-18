@@ -25,7 +25,7 @@ public class menu extends AppCompatActivity {
 
     }
 
-    private List<Plato> obtenerMenu() {
+    public static List<Plato> obtenerMenu() {
         List<Plato> plato=new ArrayList<>();
         plato.add(new Plato("WHOPPER BBQ","Carne a la parrilla, mayonesa, lechuga, cebolla, jitomate, pepinillos, queso americano y crujientes trozos de tocino.¡Todo acompañado de una deliciosa salsita BBQ!","$80",R.drawable.bbq_1));
         plato.add(new Plato("WHOPPER CON QUESO","Carne de res a la parrilla, preparada con jugosos tomates, lechuga recién cortada, mayonesa, pepinillos y cebollas en rodajas, sobre un pan suave con ajonjolí.","$60",R.drawable.whopperqueso_2));

@@ -13,9 +13,12 @@ import java.util.List;
 public class MesaAdaptador extends RecyclerView.Adapter<MesaAdaptador.ViewHolder> {
 
     List<Mesa> mesaList;
+    public OnItemClickListener itemClickListener;
+
+
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        private TextView tvIdMesa, tvDisposicion, tvCapacidad;
+        public TextView tvIdMesa, tvDisposicion, tvCapacidad;
         ImageView imgMesa;
 
         public ViewHolder(View itemView) {
@@ -25,11 +28,20 @@ public class MesaAdaptador extends RecyclerView.Adapter<MesaAdaptador.ViewHolder
             tvCapacidad=itemView.findViewById(R.id.tvCapacidad);
             imgMesa=itemView.findViewById(R.id.imgMesa);
         }
+
+        public void bind(final Mesa mesa,final OnItemClickListener listener){
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(mesa,getAdapterPosition());
+                }
+            });
+        }
     }
 
-    public MesaAdaptador(List<Mesa> mesaList){
+    public MesaAdaptador(List<Mesa> mesaList, OnItemClickListener listener){
         this.mesaList=mesaList;
-
+        this.itemClickListener=listener;
     }
 
 
@@ -48,11 +60,17 @@ public class MesaAdaptador extends RecyclerView.Adapter<MesaAdaptador.ViewHolder
         holder.tvDisposicion.setText(mesaList.get(position).getTvDisposicion());
         holder.imgMesa.setImageResource(mesaList.get(position).getImgMesa());
 
+        holder.bind(mesaList.get(position),itemClickListener);
+
     }
 
     @Override
     public int getItemCount() {
         return mesaList.size();
+    }
+
+    public interface OnItemClickListener{
+        void onItemClick(Mesa mesa, int position);
     }
 
 }

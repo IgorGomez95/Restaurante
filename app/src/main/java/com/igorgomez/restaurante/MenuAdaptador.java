@@ -5,6 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -12,8 +13,7 @@ import java.util.List;
 
 public class MenuAdaptador extends RecyclerView.Adapter<MenuAdaptador.ViewHolder> {
 
-    List<Plato> platoList;
-
+    private List<Plato> platoList;
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView tvNombrePlato, tvDescripcion, tvPrecio;

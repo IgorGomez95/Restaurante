@@ -20,7 +20,12 @@ public class menu extends AppCompatActivity {
         recyclerViewMenu=findViewById(R.id.rvMenu);
         recyclerViewMenu.setLayoutManager(new LinearLayoutManager(this));
 
-        menuAdaptador=new MenuAdaptador(obtenerMenu());
+        menuAdaptador=new MenuAdaptador(obtenerMenu(), new MenuAdaptador.OnItemClickListener() {
+            @Override
+            public void onItemClick(Plato plato, int position) {
+
+            }
+        });
         recyclerViewMenu.setAdapter(menuAdaptador);
 
     }

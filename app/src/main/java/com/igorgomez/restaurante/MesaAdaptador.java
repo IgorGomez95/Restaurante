@@ -15,8 +15,6 @@ public class MesaAdaptador extends RecyclerView.Adapter<MesaAdaptador.ViewHolder
     List<Mesa> mesaList;
     public OnItemClickListener itemClickListener;
 
-
-
     public static class ViewHolder extends RecyclerView.ViewHolder{
         public TextView tvIdMesa, tvDisposicion, tvCapacidad;
         ImageView imgMesa;

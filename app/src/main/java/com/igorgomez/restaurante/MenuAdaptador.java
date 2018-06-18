@@ -14,6 +14,7 @@ import java.util.List;
 public class MenuAdaptador extends RecyclerView.Adapter<MenuAdaptador.ViewHolder> {
 
     private List<Plato> platoList;
+    public MenuAdaptador.OnItemClickListener itemClickListener;
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
         private TextView tvNombrePlato, tvDescripcion, tvPrecio;
@@ -26,10 +27,20 @@ public class MenuAdaptador extends RecyclerView.Adapter<MenuAdaptador.ViewHolder
             tvPrecio=itemView.findViewById(R.id.tvPrecio);
             imgPlato=itemView.findViewById(R.id.imgPlato);
         }
+
+        public void bind(final Plato plato,final OnItemClickListener listener){
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(plato,getAdapterPosition());
+                }
+            });
+        }
     }
 
-    public MenuAdaptador(List<Plato> platoList){
+    public MenuAdaptador(List<Plato> platoList, OnItemClickListener listener){
         this.platoList=platoList;
+        this.itemClickListener= listener;
     }
 
 
@@ -47,10 +58,16 @@ public class MenuAdaptador extends RecyclerView.Adapter<MenuAdaptador.ViewHolder
         holder.tvDescripcion.setText(platoList.get(position).getTvDescripcion());
         holder.tvPrecio.setText(platoList.get(position).getTvPrecio());
         holder.imgPlato.setImageResource(platoList.get(position).getImgPlato());
+
+        holder.bind(platoList.get(position),itemClickListener);
     }
 
     @Override
     public int getItemCount() {
         return platoList.size();
+    }
+
+    public interface OnItemClickListener{
+        void onItemClick(Plato plato,int position);
     }
 }

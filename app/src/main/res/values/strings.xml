@@ -27,4 +27,5 @@
     <string name="pCapacidad">Capacidad</string>
     <string name="pDisposicion">Disposicion</string>
     <string name="pConsumo">Consumo</string>
+    <string name="btnDesocupar">Desocupar Mesa</string>
 </resources>

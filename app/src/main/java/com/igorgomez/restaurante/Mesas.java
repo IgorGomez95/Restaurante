@@ -79,12 +79,40 @@ public class Mesas extends AppCompatActivity {
     private List<Mesa> obtenerMesas() {
         List<Mesa> mesa=new ArrayList<>();
         mesa.add(new Mesa("Mesa 1","Capacidad: 4 personas","Disponible",R.drawable.desocupada));
+        if (Pedidos.pedido1.size()>=1){
+            mesa.get(0).setTvDisposicion("Ocupada");
+            mesa.get(0).setImgMesa(R.drawable.ocupada);
+        }
         mesa.add(new Mesa("Mesa 2","Capacidad: 6 personas","Disponible",R.drawable.desocupada));
+        if (Pedidos.pedido2.size()>=1){
+            mesa.get(1).setTvDisposicion("Ocupada");
+            mesa.get(1).setImgMesa(R.drawable.ocupada);
+        }
         mesa.add(new Mesa("Mesa 3","Capacidad: 4 personas","Disponible",R.drawable.desocupada));
+        if (Pedidos.pedido3.size()>=1){
+            mesa.get(2).setTvDisposicion("Ocupada");
+            mesa.get(2).setImgMesa(R.drawable.ocupada);
+        }
         mesa.add(new Mesa("Mesa 4","Capacidad: 8 personas","Disponible",R.drawable.desocupada));
+        if (Pedidos.pedido4.size()>=1){
+            mesa.get(3).setTvDisposicion("Ocupada");
+            mesa.get(3).setImgMesa(R.drawable.ocupada);
+        }
         mesa.add(new Mesa("Mesa 5","Capacidad: 5 personas","Disponible",R.drawable.desocupada));
+        if (Pedidos.pedido5.size()>=1){
+            mesa.get(4).setTvDisposicion("Ocupada");
+            mesa.get(4).setImgMesa(R.drawable.ocupada);
+        }
         mesa.add(new Mesa("Mesa 6","Capacidad: 8 personas","Disponible",R.drawable.desocupada));
+        if (Pedidos.pedido6.size()>=1){
+            mesa.get(5).setTvDisposicion("Ocupada");
+            mesa.get(5).setImgMesa(R.drawable.ocupada);
+        }
         mesa.add(new Mesa("Mesa 7","Capacidad: 4 personas","Disponible",R.drawable.desocupada));
+        if (Pedidos.pedido7.size()>=1){
+            mesa.get(6).setTvDisposicion("Ocupada");
+            mesa.get(6).setImgMesa(R.drawable.ocupada);
+        }
         return mesa;
     }
 }

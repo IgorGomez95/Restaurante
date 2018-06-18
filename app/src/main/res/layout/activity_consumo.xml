@@ -51,6 +51,13 @@
         android:paddingBottom="10dp"
         android:paddingTop="5dp"/>
 
+    <Button
+        android:id="@+id/btnDesocuparMesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Boton"
+        android:text="@string/btnDesocupar"/>
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rvConsumo"
         android:layout_width="match_parent"

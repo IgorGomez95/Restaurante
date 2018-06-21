@@ -11,6 +11,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Pedidos extends AppCompatActivity {
     static List<Plato> pedido1=new ArrayList<>();
     static List<Plato> pedido2=new ArrayList<>();

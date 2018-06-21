@@ -6,7 +6,6 @@ public class Plato {
     private int imgPlato;
 
 
-
     public Plato(){
 
     }
